@@ -1,7 +1,7 @@
 KBase Service Template
 ================
 
-Provide the service template for using AWE, Shock, Workspace together to integrate personal script into a new service
+Provide the service template for using AWE, Shock, Workspace together to integrate personal scripts into a new service
 
 
 How to use it
