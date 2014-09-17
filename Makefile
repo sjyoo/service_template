@@ -45,6 +45,7 @@ deploy_config:
 	cp lconfig/deployment.cfg $(TARGET)
 	cp lconfig/awe/* $(TARGET)/services/awe_service/conf
 	cp lconfig/shock/* $(TARGET)/services/shock_service/conf
+	cp lconfig/ws/* $(TARGET)/services/workspace
 
 clean:
 	rm -rf $(TOP_DIR) $(TARGET)
