@@ -1,0 +1,1 @@
+/kb/deployment/services/userandjobstate/glassfish_administer_service.py --admin /kb/runtime/glassfish3/glassfish/bin/asadmin --domain UserAndJobState --domain-dir /kb/deployment/services/workspace/glassfish_domain --port 7083
