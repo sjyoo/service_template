@@ -1,0 +1,4 @@
+#group-name	st	[% kb_service_name %]
+#command-set	scripts/(.*).pl	st
+#command-set	scripts/(.*)\.r$	st
+#command-set	scripts/(.*)\.py	st

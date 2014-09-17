@@ -1,0 +1,25 @@
+/*
+[% kb_service_name %] APIs 
+
+
+*/
+
+module [% kb_service_name %] 
+{
+  /*You need to use KBase auth service to get the authentication*/
+  authentication required;
+
+  typedef structure {	  
+    string ws_id; /*ws_id is the workspace id*/
+    string inobj_id; /*inobj_id is expression series object id */
+    string outobj_id; /*outobj_id is the output object id*/
+    float p_value; /*p_value cut off*/
+    string method;/*method is the method used*/
+    int num_genes;/*num_gene is needed*/
+  } [% kb_service_name %]ExampleParams;
+  
+  /* Description of mys_example: 
+     Add description here*/
+  
+  funcdef mys_example([% kb_service_name %]ExampleParams args) returns (list<string> job_id);
+};
