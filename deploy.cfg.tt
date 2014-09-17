@@ -17,8 +17,8 @@
 
 # Note: do not document after each field defined
 [[% kb_service_name %]]
-awe_url=http://localhost:7107
-ujs_url=http://localhost:7083
-shock_url=http://localhost:7080
+shock_url=http://localhost:7078
+awe_url=http://localhost:7080
 ws_url=http://localhost:7058
+ujs_url=http://localhost:7083
 clientgroups=prod
