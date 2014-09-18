@@ -9,6 +9,7 @@ TPAGE = $(DEPLOY_RUNTIME)/bin/tpage
 TPAGE_ARGS = --define kb_top=$(TARGET) --define kb_runtime=$(DEPLOY_RUNTIME) --define kb_service_name=$(SERVICE_NAME) --define kb_service_port=$(SERVICE_PORT)
 
 TT_FILES = $(wildcard *.tt)
+TTT_FILES = $(wildcard t/*.tt)
 default: dev_container deploy
 
 dev_container:
@@ -32,13 +33,19 @@ deploy_make:
 deploy_repo: 
 	if [ ! -d $(SERVICE_DIR) ] ; then \
         	mkdir -p $(SERVICE_DIR) ; \
-        	rsync --exclude '*.tt' --exclude lconfig -arv . $(SERVICE_DIR); \
+        	rsync --exclude '*.tt' --exclude lconfig --exclude ".git" -arv . $(SERVICE_DIR); \
         	cp -r service $(SERVICE_DIR); \
 		for src in $(TT_FILES) ; do \
 			basefile=`basename $$src`; \
 			base=`basename $$src .tt`; \
 			$(TPAGE) $(TPAGE_ARGS) $$src > $(SERVICE_DIR)/$$base; \
 		done; \
+		for src in $(TTT_FILES) ; do \
+			basefile=`basename $$src`; \
+			base=`basename $$src .tt`; \
+			$(TPAGE) $(TPAGE_ARGS) $$src > $(SERVICE_DIR)/t/$$base; \
+		done; \
+		mv $(SERVICE_DIR)/MyService.spec $(SERVICE_DIR)/$(SERVICE_NAME).spec; \
 	fi
 
 deploy_config:
