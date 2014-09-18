@@ -47,6 +47,9 @@ deploy_config:
 	cp lconfig/shock/* $(TARGET)/services/shock_service/conf
 	cp lconfig/ws/* $(TARGET)/services/workspace
 	cp lconfig/ujs/* $(TARGET)/services/userandjobstate
+	mkdir -p /mnt/Shock/logs
+	mkdir -p /mnt/Shock/site
+	mkdir -p /mnt/Shock/data
 
 clean:
 	rm -rf $(TOP_DIR) $(TARGET)

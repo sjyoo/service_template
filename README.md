@@ -13,11 +13,11 @@ How to set up
 3. make
 4. start services
   - . /kb/deployment/user-env.sh; mkdir -p /mnt/mongo; mongod --dbpath=/mnt/mongo
-  - /kb/deployment/services/workspace/start_service
   - /kb/deployment/services/shock_service/start_service
+  - /kb/deployment/services/userandjobstate/start_service
+  - /kb/deployment/services/workspace/start_service (Requires /kb/dev_container/modules/workspace_deluxe/administration/initialize.py)
   - /kb/deployment/services/awe_service/start_service
   - /kb/deployment/services/awe_service/start_aweclient
-  - /kb/deployment/services/userandjobstate/start_service
 5. Add your scripts in your /kb/dev_container/modules/$SERVICE_NAME/scripts and update your script configurations (refer Service Configuration)
 6. Add your code into repo
   - cd /kb/dev_container/modules/$SERVICE_NAME/
