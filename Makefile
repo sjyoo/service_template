@@ -18,6 +18,8 @@ dev_container:
 	if [ ! -d $(TOP_DIR)/modules/typecomp ] ; then git clone https://github.com/kbase/typecomp $(TOP_DIR)/modules/typecomp ; fi
 	if [ ! -d $(TOP_DIR)/modules/user_and_job_state ] ; then git clone https://github.com/kbase/user_and_job_state $(TOP_DIR)/modules/user_and_job_state ; fi
 	if [ ! -d $(TOP_DIR)/modules/workspace_deluxe ] ; then git clone https://github.com/kbase/workspace_deluxe $(TOP_DIR)/modules/workspace_deluxe ; fi
+	if [ ! -d $(TOP_DIR)/modules/handle_service ] ; then git clone https://github.com/kbase/handle_service $(TOP_DIR)/modules/handle_service ; fi
+	if [ ! -d $(TOP_DIR)/modules/handle_mngr ] ; then git clone https://github.com/kbase/handle_mngr $(TOP_DIR)/modules/handle_mngr ; fi
 	if [ ! -d $(TOP_DIR)/modules/awe_service ] ; then git clone https://github.com/kbase/awe_service $(TOP_DIR)/modules/awe_service ; fi
 	if [ ! -d $(TOP_DIR)/modules/shock_service ] ; then git clone https://github.com/kbase/shock_service $(TOP_DIR)/modules/shock_service ; fi
 	if [ ! -d $(TOP_DIR)/modules/kbapi_common ] ; then git clone https://github.com/kbase/kbapi_common $(TOP_DIR)/modules/kbapi_common ; fi
