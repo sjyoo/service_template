@@ -21,7 +21,7 @@ dev_container:
 	if [ ! -d $(TOP_DIR)/modules/awe_service ] ; then git clone https://github.com/kbase/awe_service $(TOP_DIR)/modules/awe_service ; fi
 	if [ ! -d $(TOP_DIR)/modules/shock_service ] ; then git clone https://github.com/kbase/shock_service $(TOP_DIR)/modules/shock_service ; fi
 	if [ ! -d $(TOP_DIR)/modules/kbapi_common ] ; then git clone https://github.com/kbase/kbapi_common $(TOP_DIR)/modules/kbapi_common ; fi
-	if [ ! -d $(TOP_DIR)/modules/jars ] ; then git clone kbase@git.kbase.us:jars $(TOP_DIR)/modules/jars ; fi
+	if [ ! -d $(TOP_DIR)/modules/jars ] ; then git clone https://github.com/kbase/jars $(TOP_DIR)/modules/jars ; fi
 	if [ ! -d $(TOP_DIR)/modules/auth ] ; then git clone kbase@git.kbase.us:auth $(TOP_DIR)/modules/auth ; fi
 	#cd $(TOP_DIR); $(TOP_DIR)/bootstrap $(DEPLOY_RUNTIME);
 
