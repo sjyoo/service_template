@@ -1,4 +1,4 @@
-[[% kb_service_name %]]
+[mys_example]
 ujs_description="[% kb_service_name %] Example"
 ujs_ptype="task"
 ujs_mstep=1
