@@ -11,13 +11,16 @@ How to set up
   - export SERVICE_NAME=MyNewService
   - export SERVICE_PORT=9999 (Register at https://trac.kbase.us/projects/kbase/wiki/IntegrationTargets)
 3. make
-  - cd /kb/dev_container/modules/workspace_deluxe; git checkout 98d85488075889250d458cace2663e3201c1b278
+  - cd /kb/dev_container/modules/workspace_deluxe;
   - make; make deploy
   - cd YOUR_SERVICE_TEMPLATE
   - make deploy_config
 4. start services
   - . /kb/deployment/user-env.sh; mkdir -p /mnt/mongo; mongod --dbpath=/mnt/mongo
   - /kb/deployment/services/shock_service/start_service
+  - cat /kb/dev_container/modules/handle_service/hsi.sql | mysql
+  - /kb/deployment/services/handle_service/start_service
+  - /kb/deployment/services/handle_mngr/start_service
   - /kb/deployment/services/workspace/start_service (Requires /kb/dev_container/modules/workspace_deluxe/administration/initialize.py)
   - /kb/deployment/services/awe_service/start_service
   - /kb/deployment/services/awe_service/start_aweclient
