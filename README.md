@@ -6,7 +6,7 @@ The KBase service template repo provides a new service code template using AWE, 
 
 How to set up
 ----------------
-1. git clone https://github.com/sjyoo/service_template; cd service_template
+1. cd ~; git clone https://github.com/sjyoo/service_template; cd service_template
 2. Set environment variables
   - export SERVICE_NAME=MyNewService
   - export SERVICE_PORT=9999 (Register at https://trac.kbase.us/projects/kbase/wiki/IntegrationTargets)
